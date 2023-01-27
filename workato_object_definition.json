@@ -1,0 +1,793 @@
+[
+    {
+        "name": "availability",
+        "label": "availability",
+        "type": ":object",
+        "properties": [
+            {
+                "name": "pickupAtLocationAvailability",
+                "label": "pickupAtLocationAvailability",
+                "type": ":array",
+                "of": ":object",
+                "properties": [
+                    {
+                        "name": "availabilityType",
+                        "label": "availabilityType",
+                        "control_type": ":select",
+                        "pick_list": [
+                            [
+                                "In stock",
+                                "IN_STOCK"
+                            ],
+                            [
+                                "Out of stock",
+                                "OUT_OF_STOCK"
+                            ],
+                            [
+                                "Ship to store",
+                                "SHIP_TO_STORE"
+                            ]
+                        ],
+                        "toggle_hint": "Select from option list",
+                        "toggle_field": {
+                            "name": "availabilityType",
+                            "label": "availabilityType",
+                            "control_type": ":text",
+                            "type": ":string",
+                            "toggle_hint": "Use custom value",
+                            "hint": ""
+                        }
+                    },
+                    {
+                        "name": "fulfillmentTime",
+                        "label": "fulfillmentTime",
+                        "type": ":object",
+                        "properties": [
+                            {
+                                "name": "unit",
+                                "label": "unit",
+                                "control_type": ":select",
+                                "pick_list": [
+                                    [
+                                        "Year",
+                                        "YEAR"
+                                    ],
+                                    [
+                                        "Month",
+                                        "MONTH"
+                                    ],
+                                    [
+                                        "Day",
+                                        "DAY"
+                                    ],
+                                    [
+                                        "Hour",
+                                        "HOUR"
+                                    ],
+                                    [
+                                        "Calendar day",
+                                        "CALENDAR_DAY"
+                                    ],
+                                    [
+                                        "Business day",
+                                        "BUSINESS_DAY"
+                                    ],
+                                    [
+                                        "Minute",
+                                        "MINUTE"
+                                    ],
+                                    [
+                                        "Second",
+                                        "SECOND"
+                                    ],
+                                    [
+                                        "Millisecond",
+                                        "MILLISECOND"
+                                    ]
+                                ],
+                                "toggle_hint": "Select from option list",
+                                "toggle_field": {
+                                    "name": "unit",
+                                    "label": "unit",
+                                    "control_type": ":text",
+                                    "type": ":string",
+                                    "toggle_hint": "Use custom value",
+                                    "hint": ""
+                                }
+                            },
+                            {
+                                "name": "value",
+                                "label": "value",
+                                "type": ":integer",
+                                "control_type": ":integer"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "merchantLocationKey",
+                        "label": "merchantLocationKey"
+                    },
+                    {
+                        "name": "quantity",
+                        "label": "quantity",
+                        "type": ":integer",
+                        "control_type": ":integer"
+                    }
+                ]
+            },
+            {
+                "name": "shipToLocationAvailability",
+                "label": "shipToLocationAvailability",
+                "type": ":object",
+                "properties": [
+                    {
+                        "name": "allocationByFormat",
+                        "label": "allocationByFormat",
+                        "type": ":object",
+                        "properties": [
+                            {
+                                "name": "auction",
+                                "label": "auction",
+                                "type": ":integer",
+                                "control_type": ":integer"
+                            },
+                            {
+                                "name": "fixedPrice",
+                                "label": "fixedPrice",
+                                "type": ":integer",
+                                "control_type": ":integer"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "availabilityDistributions",
+                        "label": "availabilityDistributions",
+                        "type": ":array",
+                        "of": ":object",
+                        "properties": [
+                            {
+                                "name": "fulfillmentTime",
+                                "label": "fulfillmentTime",
+                                "type": ":object",
+                                "properties": [
+                                    {
+                                        "name": "unit",
+                                        "label": "unit",
+                                        "control_type": ":select",
+                                        "pick_list": [
+                                            [
+                                                "Year",
+                                                "YEAR"
+                                            ],
+                                            [
+                                                "Month",
+                                                "MONTH"
+                                            ],
+                                            [
+                                                "Day",
+                                                "DAY"
+                                            ],
+                                            [
+                                                "Hour",
+                                                "HOUR"
+                                            ],
+                                            [
+                                                "Calendar day",
+                                                "CALENDAR_DAY"
+                                            ],
+                                            [
+                                                "Business day",
+                                                "BUSINESS_DAY"
+                                            ],
+                                            [
+                                                "Minute",
+                                                "MINUTE"
+                                            ],
+                                            [
+                                                "Second",
+                                                "SECOND"
+                                            ],
+                                            [
+                                                "Millisecond",
+                                                "MILLISECOND"
+                                            ]
+                                        ],
+                                        "toggle_hint": "Select from option list",
+                                        "toggle_field": {
+                                            "name": "unit",
+                                            "label": "unit",
+                                            "control_type": ":text",
+                                            "type": ":string",
+                                            "toggle_hint": "Use custom value",
+                                            "hint": ""
+                                        }
+                                    },
+                                    {
+                                        "name": "value",
+                                        "label": "value",
+                                        "type": ":integer",
+                                        "control_type": ":integer"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "merchantLocationKey",
+                                "label": "merchantLocationKey"
+                            },
+                            {
+                                "name": "quantity",
+                                "label": "quantity",
+                                "type": ":integer",
+                                "control_type": ":integer"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "quantity",
+                        "label": "quantity",
+                        "type": ":integer",
+                        "control_type": ":integer"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "condition",
+        "label": "condition",
+        "control_type": ":select",
+        "pick_list": [
+            [
+                "New",
+                "NEW"
+            ],
+            [
+                "Like new",
+                "LIKE_NEW"
+            ],
+            [
+                "New other",
+                "NEW_OTHER"
+            ],
+            [
+                "New with defects",
+                "NEW_WITH_DEFECTS"
+            ],
+            [
+                "Manufacturer refurbished",
+                "MANUFACTURER_REFURBISHED"
+            ],
+            [
+                "Certified refurbished",
+                "CERTIFIED_REFURBISHED"
+            ],
+            [
+                "Excellent refurbished",
+                "EXCELLENT_REFURBISHED"
+            ],
+            [
+                "Very good refurbished",
+                "VERY_GOOD_REFURBISHED"
+            ],
+            [
+                "Good refurbished",
+                "GOOD_REFURBISHED"
+            ],
+            [
+                "Seller refurbished",
+                "SELLER_REFURBISHED"
+            ],
+            [
+                "Used excellent",
+                "USED_EXCELLENT"
+            ],
+            [
+                "Used very good",
+                "USED_VERY_GOOD"
+            ],
+            [
+                "Used good",
+                "USED_GOOD"
+            ],
+            [
+                "Used acceptable",
+                "USED_ACCEPTABLE"
+            ],
+            [
+                "For parts or not working",
+                "FOR_PARTS_OR_NOT_WORKING"
+            ]
+        ],
+        "toggle_hint": "Select from option list",
+        "toggle_field": {
+            "name": "condition",
+            "label": "condition",
+            "control_type": ":text",
+            "type": ":string",
+            "toggle_hint": "Use custom value",
+            "hint": ""
+        }
+    },
+    {
+        "name": "conditionDescription",
+        "label": "conditionDescription"
+    },
+    {
+        "name": "groupIds",
+        "label": "groupIds",
+        "type": ":array",
+        "of": ":string"
+    },
+    {
+        "name": "inventoryItemGroupKeys",
+        "label": "inventoryItemGroupKeys",
+        "type": ":array",
+        "of": ":string"
+    },
+    {
+        "name": "locale",
+        "label": "locale",
+        "control_type": ":select",
+        "pick_list": [
+            [
+                "En us",
+                "en_US"
+            ],
+            [
+                "En ca",
+                "en_CA"
+            ],
+            [
+                "Fr ca",
+                "fr_CA"
+            ],
+            [
+                "En gb",
+                "en_GB"
+            ],
+            [
+                "En au",
+                "en_AU"
+            ],
+            [
+                "En in",
+                "en_IN"
+            ],
+            [
+                "De at",
+                "de_AT"
+            ],
+            [
+                "Fr be",
+                "fr_BE"
+            ],
+            [
+                "Fr fr",
+                "fr_FR"
+            ],
+            [
+                "De de",
+                "de_DE"
+            ],
+            [
+                "It it",
+                "it_IT"
+            ],
+            [
+                "Nl be",
+                "nl_BE"
+            ],
+            [
+                "Nl nl",
+                "nl_NL"
+            ],
+            [
+                "Es es",
+                "es_ES"
+            ],
+            [
+                "De ch",
+                "de_CH"
+            ],
+            [
+                "Fi fi",
+                "fi_FI"
+            ],
+            [
+                "Zh hk",
+                "zh_HK"
+            ],
+            [
+                "Hu hu",
+                "hu_HU"
+            ],
+            [
+                "En ph",
+                "en_PH"
+            ],
+            [
+                "Pl pl",
+                "pl_PL"
+            ],
+            [
+                "Pt pt",
+                "pt_PT"
+            ],
+            [
+                "Ru ru",
+                "ru_RU"
+            ],
+            [
+                "En sg",
+                "en_SG"
+            ],
+            [
+                "En ie",
+                "en_IE"
+            ],
+            [
+                "En my",
+                "en_MY"
+            ]
+        ],
+        "toggle_hint": "Select from option list",
+        "toggle_field": {
+            "name": "locale",
+            "label": "locale",
+            "control_type": ":text",
+            "type": ":string",
+            "toggle_hint": "Use custom value",
+            "hint": ""
+        }
+    },
+    {
+        "name": "packageWeightAndSize",
+        "label": "packageWeightAndSize",
+        "type": ":object",
+        "properties": [
+            {
+                "name": "dimensions",
+                "label": "dimensions",
+                "type": ":object",
+                "properties": [
+                    {
+                        "name": "height",
+                        "label": "height",
+                        "type": ":number",
+                        "control_type": ":number"
+                    },
+                    {
+                        "name": "length",
+                        "label": "length",
+                        "type": ":number",
+                        "control_type": ":number"
+                    },
+                    {
+                        "name": "unit",
+                        "label": "unit",
+                        "control_type": ":select",
+                        "pick_list": [
+                            [
+                                "Year",
+                                "YEAR"
+                            ],
+                            [
+                                "Month",
+                                "MONTH"
+                            ],
+                            [
+                                "Day",
+                                "DAY"
+                            ],
+                            [
+                                "Hour",
+                                "HOUR"
+                            ],
+                            [
+                                "Calendar day",
+                                "CALENDAR_DAY"
+                            ],
+                            [
+                                "Business day",
+                                "BUSINESS_DAY"
+                            ],
+                            [
+                                "Minute",
+                                "MINUTE"
+                            ],
+                            [
+                                "Second",
+                                "SECOND"
+                            ],
+                            [
+                                "Millisecond",
+                                "MILLISECOND"
+                            ]
+                        ],
+                        "toggle_hint": "Select from option list",
+                        "toggle_field": {
+                            "name": "unit",
+                            "label": "unit",
+                            "control_type": ":text",
+                            "type": ":string",
+                            "toggle_hint": "Use custom value",
+                            "hint": ""
+                        }
+                    },
+                    {
+                        "name": "width",
+                        "label": "width",
+                        "type": ":number",
+                        "control_type": ":number"
+                    }
+                ]
+            },
+            {
+                "name": "packageType",
+                "label": "packageType",
+                "control_type": ":select",
+                "pick_list": [
+                    [
+                        "Letter",
+                        "LETTER"
+                    ],
+                    [
+                        "Bulky goods",
+                        "BULKY_GOODS"
+                    ],
+                    [
+                        "Caravan",
+                        "CARAVAN"
+                    ],
+                    [
+                        "Cars",
+                        "CARS"
+                    ],
+                    [
+                        "Europallet",
+                        "EUROPALLET"
+                    ],
+                    [
+                        "Expandable tough bags",
+                        "EXPANDABLE_TOUGH_BAGS"
+                    ],
+                    [
+                        "Extra large pack",
+                        "EXTRA_LARGE_PACK"
+                    ],
+                    [
+                        "Furniture",
+                        "FURNITURE"
+                    ],
+                    [
+                        "Industry vehicles",
+                        "INDUSTRY_VEHICLES"
+                    ],
+                    [
+                        "Large canada postbox",
+                        "LARGE_CANADA_POSTBOX"
+                    ],
+                    [
+                        "Large canada post bubble mailer",
+                        "LARGE_CANADA_POST_BUBBLE_MAILER"
+                    ],
+                    [
+                        "Large envelope",
+                        "LARGE_ENVELOPE"
+                    ],
+                    [
+                        "Mailing box",
+                        "MAILING_BOX"
+                    ],
+                    [
+                        "Medium canada post box",
+                        "MEDIUM_CANADA_POST_BOX"
+                    ],
+                    [
+                        "Medium canada post bubble mailer",
+                        "MEDIUM_CANADA_POST_BUBBLE_MAILER"
+                    ],
+                    [
+                        "Motorbikes",
+                        "MOTORBIKES"
+                    ],
+                    [
+                        "One way pallet",
+                        "ONE_WAY_PALLET"
+                    ],
+                    [
+                        "Package thick envelope",
+                        "PACKAGE_THICK_ENVELOPE"
+                    ],
+                    [
+                        "Padded bags",
+                        "PADDED_BAGS"
+                    ],
+                    [
+                        "Parcel or padded envelope",
+                        "PARCEL_OR_PADDED_ENVELOPE"
+                    ],
+                    [
+                        "Roll",
+                        "ROLL"
+                    ],
+                    [
+                        "Small canada post box",
+                        "SMALL_CANADA_POST_BOX"
+                    ],
+                    [
+                        "Small canada post bubble mailer",
+                        "SMALL_CANADA_POST_BUBBLE_MAILER"
+                    ],
+                    [
+                        "Tough bags",
+                        "TOUGH_BAGS"
+                    ],
+                    [
+                        "Ups letter",
+                        "UPS_LETTER"
+                    ],
+                    [
+                        "Usps flat rate envelope",
+                        "USPS_FLAT_RATE_ENVELOPE"
+                    ],
+                    [
+                        "Usps large pack",
+                        "USPS_LARGE_PACK"
+                    ],
+                    [
+                        "Very large pack",
+                        "VERY_LARGE_PACK"
+                    ],
+                    [
+                        "Wine pak",
+                        "WINE_PAK"
+                    ]
+                ],
+                "toggle_hint": "Select from option list",
+                "toggle_field": {
+                    "name": "packageType",
+                    "label": "packageType",
+                    "control_type": ":text",
+                    "type": ":string",
+                    "toggle_hint": "Use custom value",
+                    "hint": ""
+                }
+            },
+            {
+                "name": "weight",
+                "label": "weight",
+                "type": ":object",
+                "properties": [
+                    {
+                        "name": "unit",
+                        "label": "unit",
+                        "control_type": ":select",
+                        "pick_list": [
+                            [
+                                "Year",
+                                "YEAR"
+                            ],
+                            [
+                                "Month",
+                                "MONTH"
+                            ],
+                            [
+                                "Day",
+                                "DAY"
+                            ],
+                            [
+                                "Hour",
+                                "HOUR"
+                            ],
+                            [
+                                "Calendar day",
+                                "CALENDAR_DAY"
+                            ],
+                            [
+                                "Business day",
+                                "BUSINESS_DAY"
+                            ],
+                            [
+                                "Minute",
+                                "MINUTE"
+                            ],
+                            [
+                                "Second",
+                                "SECOND"
+                            ],
+                            [
+                                "Millisecond",
+                                "MILLISECOND"
+                            ]
+                        ],
+                        "toggle_hint": "Select from option list",
+                        "toggle_field": {
+                            "name": "unit",
+                            "label": "unit",
+                            "control_type": ":text",
+                            "type": ":string",
+                            "toggle_hint": "Use custom value",
+                            "hint": ""
+                        }
+                    },
+                    {
+                        "name": "value",
+                        "label": "value",
+                        "type": ":integer",
+                        "control_type": ":integer"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "product",
+        "label": "product",
+        "type": ":object",
+        "properties": [
+            {
+                "name": "aspects",
+                "label": "aspects"
+            },
+            {
+                "name": "brand",
+                "label": "brand"
+            },
+            {
+                "name": "description",
+                "label": "description"
+            },
+            {
+                "name": "ean",
+                "label": "ean",
+                "type": ":array",
+                "of": ":string"
+            },
+            {
+                "name": "epid",
+                "label": "epid"
+            },
+            {
+                "name": "imageUrls",
+                "label": "imageUrls",
+                "type": ":array",
+                "of": ":string"
+            },
+            {
+                "name": "isbn",
+                "label": "isbn",
+                "type": ":array",
+                "of": ":string"
+            },
+            {
+                "name": "mpn",
+                "label": "mpn"
+            },
+            {
+                "name": "subtitle",
+                "label": "subtitle"
+            },
+            {
+                "name": "title",
+                "label": "title"
+            },
+            {
+                "name": "upc",
+                "label": "upc",
+                "type": ":array",
+                "of": ":string"
+            },
+            {
+                "name": "videoIds",
+                "label": "videoIds",
+                "type": ":array",
+                "of": ":string"
+            }
+        ]
+    },
+    {
+        "name": "sku",
+        "label": "sku"
+    }
+]
